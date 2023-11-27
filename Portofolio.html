@@ -9,10 +9,25 @@ function MM_preloadImages() { //v3.0
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
 }
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
 </script>
 </head>
 
-<body>
+<body onLoad="MM_preloadImages('Screenshot (1629).png','Screenshot (1621).png','Screenshot (1624).png','Screenshot (305).png')">
 	<div class="Navbar" style= "padding-bottom:0px" ; text-align: center; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;>
   <table width="100%" border="0" cellspacing="0">
     <tbody>
@@ -26,27 +41,41 @@ function MM_preloadImages() { //v3.0
     </tbody>
   </table>
 </div>
-<div class="Isi" style="margin: 0px; padding: 0px">
+<div class="Isi" style="margin: 0px; padding: 0px;">
   <table width="100%" border="0" cellpadding="0" cellspacing="0">
       <tbody>
         <tr>
-          <td height="50" colspan="2" bgcolor="#D1E0FA">&nbsp;</td>
+          <td height="50" colspan="2" bgcolor="#AAC6F6">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="50" colspan="2" bgcolor="#D1E0FA"><p style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif; font-size: 24px; margin-left: 50px; margin-right: 50px">Jadi pada laman ini saya ingin membagikan hal yang saya sukai yaitu bermain game. Di sini saya akan menampilkan beberapa rekaman gameplay saya beserta beberapa gambar yang berhubungan dengan game yang saya sukai.</p></td>
         </tr>
         <tr>
           <td width="300"><iframe src="https://drive.google.com/file/d/14cmVguzCUyZbEUxMICSIjvp7jdeyH2V-/preview" width="640" height="480" allow="autoplay"></iframe></td>
-          <td width="100%"> Ini adalah salah satu game FPS yang saya sangat sukai.</td>
+          <td width="100%" style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif; font-size: 24px; text-align: center"><iframe src="https://drive.google.com/file/d/1IaHM1VWmSk-GTGZNkFwMIGqJ1xVdswHP/preview" width="640" height="480" allow="autoplay"></iframe></td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>Gambar</td>
+          <td><p style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif; font-size: 24px; text-align: center">Metro 2033 Redux</p></td>
+          <td style= text-align: center;><p style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif; font-size: 24px; text-align: center">Path Of Exile</p></td>
         </tr>
         <tr>
-          <td>Gambar</td>
-          <td>&nbsp;</td>
+          <td bgcolor="#D1E0FA">&nbsp;</td>
+          <td bgcolor="#D1E0FA">&nbsp;</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>gambar</td>
+          <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','Screenshot (1629).png',1)"><img src="Screenshot (1623).png" alt="" width="640" height="480" id="Image4"></a></td>
+          <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','Screenshot (1621).png',1)"><img src="Screenshot (1630).png" alt="" width="640" height="480" id="Image5"></a></td>
+        </tr>
+        <tr>
+          <td colspan="2"><p style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif; font-size: 24px; text-align: center">Honkai Star Rail</p></td>
+        </tr>
+        <tr>
+          <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','Screenshot (1624).png',1)"><img src="Screenshot (1591).png" alt="" width="640" height="480" id="Image6"></a></td>
+          <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','Screenshot (305).png',1)"><img src="Screenshot (294).png" alt="" width="640" height="480" id="Image7"></a></td>
+        </tr>
+        <tr>
+          <td><p style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif; font-size: 24px; text-align: center">Project Zomboid</p></td>
+          <td><p style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif; font-size: 24px; text-align: center">Terraria</p></td>
         </tr>
         <tr>
           <td height="50" colspan="2" bgcolor="#D1E0FA">&nbsp;</td>
